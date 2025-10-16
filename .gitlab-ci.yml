@@ -1,0 +1,21 @@
+
+stages:          # List of stages for jobs, and their order of execution
+  - build
+
+variables:
+  MODEL:
+    description: "Select dron model for which  the image to be created"
+    value: dron-model-1
+  RELEASE:
+    description: "Select release of the base os image"
+    value: "0.0.1"
+ 
+
+build-job:       # This job runs in the build stage, which runs first.
+  stage: build
+  script:
+    - ./build_image.sh
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR/dron_$RELEASE.img
+

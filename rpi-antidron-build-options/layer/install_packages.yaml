@@ -1,0 +1,13 @@
+# METABEGIN
+# X-Env-Layer-Name: install-packages
+# X-Env-Layer-Category: example
+# X-Env-Layer-Desc: Example install some packages
+# X-Env-Layer-Requires: rpi-user-credentials,systemd-net-min
+#
+# METAEND
+---
+mmdebstrap:
+  packages:
+    - git
+    - curl
+

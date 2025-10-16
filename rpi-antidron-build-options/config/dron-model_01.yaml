@@ -1,0 +1,13 @@
+include:
+  file: dron-base.yaml
+
+image:
+  name: dron_$RELEASE
+
+device:
+  hostname: dron
+  user1: pilot01
+  user1pass: 1234567!
+
+layer:
+  extra-packages: install-packages
